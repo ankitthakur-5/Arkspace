@@ -1,42 +1,44 @@
-# Arkspace V1
+# Arkspace V2.1
 
-A polished, responsive frontend MVP for a private team workspace.
+Mobile-friendly Next.js + Supabase foundation for Arkspace.
 
-## Included
-- Dashboard / overview
-- File manager
-- Local browser file upload
-- File preview for local images
-- Search
-- Folders UI
-- Chat UI
-- Shared notes
-- Kanban-style tasks
-- Resource links
-- Members
-- Activity feed
-- Settings
-- Responsive mobile UI
-- LocalStorage persistence for the file list
+## What is included
 
-## Run locally
-
-```bash
-npm install
-npm run dev
-```
-
-Open http://localhost:3000
-
-## V2 plan
-Replace browser-local file handling with:
-- Authentication
+- Email/password authentication
+- Private workspaces
+- Workspace membership foundation
 - PostgreSQL database
-- Cloud object storage
-- Real workspace membership/permissions
-- Realtime chat
-- Permanent file upload/download
-- File version history
-- AI assistant / workspace Q&A
+- Row Level Security policies
+- Permanent Supabase Storage uploads/downloads
+- File search
+- Shared tasks
+- Shared notes
+- Members list
+- Responsive mobile UI
 
-This V1 intentionally has no database.
+## Setup
+
+1. Create a Supabase project.
+2. Open Supabase SQL Editor.
+3. Run `supabase/schema.sql`.
+4. Copy your Supabase Project URL and anon/public key.
+5. Add these variables to Vercel:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+6. Redeploy.
+7. Open Arkspace and create an account.
+
+## Important
+
+Never put the Supabase `service_role` key in the browser or in `NEXT_PUBLIC_*` variables.
+
+## Next V2 steps
+
+- Workspace invitations
+- File folders and previews
+- File delete/version history
+- Realtime chat
+- Activity feed
+- Better task board/editor
+- Workspace permissions UI
+- AI assistant
