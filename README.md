@@ -42,3 +42,4 @@ Never put the Supabase `service_role` key in the browser or in `NEXT_PUBLIC_*` v
 - Better task board/editor
 - Workspace permissions UI
 - AI assistant
+Arkspace V2
